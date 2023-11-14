@@ -49,6 +49,21 @@ n = 8939
 print(digSum(n))
 
 # 3. Count the number of three consecutive negative number sub set in the array (non overlapping) 23,3 , -3,4,-2,-6,-7,-3,7,-3,-22,-5,34 o/p = 2
+def count_non_overlapping_odd_pairs(n):
+    count=0
+    i=0
+    while i<len(n)-1:
+        if n[i]<=0 and n[i+1]<=0 and n[i+2]<=0:
+            count+=1
+            i+=3
+        else:
+            i+=1
+    return count
+n=[23,3,-3,4,-2,-6,-7,-3,7,-3,-22,-5,34 ]
+result=count_non_overlapping_odd_pairs(n)
+print("no of non overlapping odd pairs is:",result)
+
+
 # 4. Get the string and print each characters in new line
 
 def charprin(m):
