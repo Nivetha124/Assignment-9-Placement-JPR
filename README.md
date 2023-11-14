@@ -98,6 +98,34 @@ for i in string:
 print("Number of Alphabets is", alpha)
 
 # 8. Count the unique digits in the given number Eg:235326 unique digits 2 3 5 6 so, o/p: 4
+n=input()
+s=[]
+for i in n:
+    if i not in s:
+        s.append(i)
+print(s)
+output is : 2356
+                                      (OR)
+n=input()
+s=[]
+count=0
+for i in n:
+    if i not in s:
+        s.append(i)
+        count+=1
+print(count)
+output is :4
+                                (OR)
+def unique_digit(n):
+    s=[]
+    count=0
+    for i in str(n):
+        if i not in s:
+            s.append(i)
+            count+=1
+    return count
+n=235326
+print(unique_digit(n))
 
 
 
