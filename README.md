@@ -6,6 +6,21 @@
 Pair of consecutive odd nos:(5,9), (3,11), (13,17)
 hence O/P: 3
 
+def count_non_overlapping_odd_pairs(n):
+    count=0
+    i=0
+    while i<len(n)-1:
+        if n[i]%2!=0 and n[i+1]%2!=0:
+            count+=1
+            i+=2
+        else:
+            i+=1
+    return count
+n=[10,7,4,5,9,12,4,3,11,13,17,5,6,96,4]
+result=count_non_overlapping_odd_pairs(n)
+print("no of non overlapping odd pairs is:",result)
+
+
 # 2. Find the sum of the digits of given number until the sum becomes single digit I/p: 8939 O/p:2
 8+9+3+9 is 29, then 2+9 is 11 then 1+1 is 2
 
